@@ -1,0 +1,19 @@
+﻿@model ClientViewModel
+
+<h1>Clients</h1>
+
+<table class="table-primary">
+   <tr>
+       <th>First Name</th>
+       <th>Last  Name</th>
+       <th>Email</th>
+       <th>Phone</th>
+   </tr>
+ @foreach (var client in Model.Clients)
+            {
+                <td>@client.FirstName</td>
+                <td>@client.LastName</td>
+                <td>@client.Email</td>
+                <td>@client.PhoneNumber</td>
+            }
+</table>

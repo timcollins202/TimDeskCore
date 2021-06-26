@@ -1,0 +1,19 @@
+﻿@model TechnicianViewModel
+
+<h1>Technicians</h1>
+
+<table class="table-primary">
+    <tr>
+        <th>First Name</th>
+        <th>Last  Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    @foreach (var technician in Model.Technicians)
+    {
+        <td>@technician.FirstName</td>
+        <td>@technician.LastName</td>
+        <td>@technician.Email</td>
+        <td>@technician.PhoneNumber</td>
+    }
+</table>

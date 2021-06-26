@@ -1,0 +1,19 @@
+﻿@model TicketViewModel
+
+<h1>Tickets</h1>
+
+<table class="table-primary">
+    <tr>
+        <th>Ticket Number</th>
+        <th>Status</th>
+        <th>Date Submitted</th>
+        <th>Requested By</th>
+    </tr>
+    @foreach (var ticket in Model.Tickets)
+    {
+        <td>@ticket.Id</td>
+        <td>@ticket.TicketStatus</td>
+        <td>@ticket.DateSubmitted</td>
+        <td>@ticket.RequestedBy.FirstName @ticket.RequestedBy.LastName</td>
+    }
+</table>
